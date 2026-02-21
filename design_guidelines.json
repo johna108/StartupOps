@@ -1,0 +1,159 @@
+{
+  "project_name": "StartupOps",
+  "design_philosophy": {
+    "theme": "Glassmorphic SaaS",
+    "core_concept": "Operational Clarity meets High-Energy Execution",
+    "emotional_tone": "Premium, Efficient, Forward-Thinking",
+    "visual_style": "Dark mode dominant, High contrast, Orange accents, Frosted Glass surfaces"
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Plus Jakarta Sans, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl font-bold tracking-tight",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl font-semibold",
+      "body_lg": "text-lg leading-relaxed",
+      "body_base": "text-base leading-relaxed",
+      "caption": "text-sm text-muted-foreground uppercase tracking-wider"
+    },
+    "installation": "Import via Google Fonts in index.html or CSS: @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono&display=swap');"
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#F97316",
+        "foreground": "#FFFFFF",
+        "hover": "#EA580C"
+      },
+      "background": {
+        "light": "#FFFFFF",
+        "dark": "#09090B"
+      },
+      "surface": {
+        "glass_dark": "rgba(255, 255, 255, 0.03)",
+        "glass_light": "rgba(255, 255, 255, 0.7)",
+        "border_dark": "rgba(255, 255, 255, 0.1)",
+        "border_light": "rgba(0, 0, 0, 0.05)"
+      }
+    },
+    "css_variables": {
+      "root": {
+        "--background": "0 0% 100%",
+        "--foreground": "240 10% 3.9%",
+        "--card": "0 0% 100%",
+        "--card-foreground": "240 10% 3.9%",
+        "--popover": "0 0% 100%",
+        "--popover-foreground": "240 10% 3.9%",
+        "--primary": "24.6 95% 53.1%",
+        "--primary-foreground": "60 9.1% 97.8%",
+        "--secondary": "240 4.8% 95.9%",
+        "--secondary-foreground": "240 5.9% 10%",
+        "--muted": "240 4.8% 95.9%",
+        "--muted-foreground": "240 3.8% 46.1%",
+        "--accent": "240 4.8% 95.9%",
+        "--accent-foreground": "240 5.9% 10%",
+        "--destructive": "0 84.2% 60.2%",
+        "--destructive-foreground": "0 0% 98%",
+        "--border": "240 5.9% 90%",
+        "--input": "240 5.9% 90%",
+        "--ring": "24.6 95% 53.1%",
+        "--radius": "0.75rem"
+      },
+      "dark": {
+        "--background": "240 10% 3.9%",
+        "--foreground": "0 0% 98%",
+        "--card": "240 10% 3.9%",
+        "--card-foreground": "0 0% 98%",
+        "--popover": "240 10% 3.9%",
+        "--popover-foreground": "0 0% 98%",
+        "--primary": "24.6 95% 53.1%",
+        "--primary-foreground": "60 9.1% 97.8%",
+        "--secondary": "240 3.7% 15.9%",
+        "--secondary-foreground": "0 0% 98%",
+        "--muted": "240 3.7% 15.9%",
+        "--muted-foreground": "240 5% 64.9%",
+        "--accent": "240 3.7% 15.9%",
+        "--accent-foreground": "0 0% 98%",
+        "--destructive": "0 62.8% 30.6%",
+        "--destructive-foreground": "0 0% 98%",
+        "--border": "240 3.7% 15.9%",
+        "--input": "240 3.7% 15.9%",
+        "--ring": "24.6 95% 53.1%"
+      }
+    }
+  },
+  "component_styling": {
+    "glass_card": {
+      "className": "bg-background/40 backdrop-blur-xl border border-border/50 shadow-sm"
+    },
+    "primary_button": {
+      "className": "bg-primary text-primary-foreground shadow hover:bg-primary/90 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
+    },
+    "secondary_button": {
+      "className": "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full font-medium"
+    },
+    "input_field": {
+      "className": "bg-background/50 border-input focus:ring-primary backdrop-blur-sm"
+    }
+  },
+  "layout_strategies": {
+    "marketing": {
+      "grid": "grid grid-cols-1 md:grid-cols-12 gap-8",
+      "container": "container mx-auto px-4 md:px-8",
+      "section_spacing": "py-20 md:py-32"
+    },
+    "dashboard": {
+      "structure": "flex h-screen overflow-hidden bg-background",
+      "sidebar": "w-64 border-r border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60",
+      "main_area": "flex-1 overflow-y-auto p-8"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "team",
+        "url": "https://images.unsplash.com/photo-1760611656007-f767a8082758?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Diverse team collaboration in modern office"
+      },
+      {
+        "category": "hero_abstract",
+        "url": "https://images.unsplash.com/photo-1667455668395-79d4dae53395?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Abstract dark glass data visualization pattern"
+      },
+      {
+        "category": "feature_dashboard",
+        "url": "https://images.unsplash.com/photo-1611559968572-2b7528e9e7c8?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Futuristic dark abstract graph element"
+      },
+      {
+        "category": "workspace",
+        "url": "https://images.unsplash.com/photo-1729327741524-0e92aecdeb3e?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Minimal dark desk setup"
+      }
+    ],
+    "icons": "Use 'lucide-react' for all UI icons. Use 'Simple Icons' (via react-icons/si) for brand logos if needed."
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: Replace the content of /app/frontend/src/index.css with the CSS variables provided in 'colors.css_variables' section. Maintain the @tailwind directives.",
+    "CRITICAL: Ensure 'Plus Jakarta Sans' is used for Headings and 'Inter' for Body.",
+    "CRITICAL: Implement the 'Glassmorphic' feel by using 'backdrop-blur-xl' and low opacity backgrounds on cards and sidebars.",
+    "Use the provided image URLs for the landing page hero and feature sections.",
+    "For the Dashboard, use a Sidebar layout. The Sidebar should be sticky and have a glass effect.",
+    "Use Orange (#F97316) as the primary action color. Do NOT use blue or purple for primary actions.",
+    "Ensure all interactive elements have hover states (opacity change or scale).",
+    "Add 'data-testid' attributes to all buttons, inputs, and links.",
+    "Use 'sonner' for toast notifications.",
+    "Implement the Dark/Light mode toggle using a context provider and Tailwind's 'dark' class."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts. Use asymmetry.",
+    "Add micro-interactions to every button and card (hover lift, glow).",
+    "Ensure text contrast meets WCAG AA standards, especially orange text on white backgrounds (might need darkening).",
+    "Use 'rounded-xl' or 'rounded-2xl' for cards to match the soft glass aesthetic.",
+    "Never leave a button without a hover state."
+  ]
+}
