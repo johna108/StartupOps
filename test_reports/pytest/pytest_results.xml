@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="8" time="4.907" timestamp="2026-02-07T23:09:31.169811+00:00" hostname="agent-env-9e7a99e5-9ec8-46b5-b26f-690d5c46bd5e"><testcase classname="backend.tests.test_auth_onboarding.TestHealthCheck" name="test_api_health" time="0.058" /><testcase classname="backend.tests.test_auth_onboarding.TestAuthSignup" name="test_signup_creates_user" time="0.354"><failure message="AssertionError: Expected 200, got 400: {&quot;detail&quot;:&quot;Failed to create account&quot;}&#10;assert 400 == 200&#10; +  where 400 = &lt;Response [400]&gt;.status_code">backend/tests/test_auth_onboarding.py:55: in test_signup_creates_user
+    assert response.status_code == 200, f"Expected 200, got {response.status_code}: {response.text}"
+E   AssertionError: Expected 200, got 400: {"detail":"Failed to create account"}
+E   assert 400 == 200
+E    +  where 400 = &lt;Response [400]&gt;.status_code</failure></testcase><testcase classname="backend.tests.test_auth_onboarding.TestAuthSignup" name="test_signup_duplicate_email_fails" time="0.309"><failure message="assert 400 == 200&#10; +  where 400 = &lt;Response [400]&gt;.status_code">backend/tests/test_auth_onboarding.py:73: in test_signup_duplicate_email_fails
+    assert response1.status_code == 200
+E   assert 400 == 200
+E    +  where 400 = &lt;Response [400]&gt;.status_code</failure></testcase><testcase classname="backend.tests.test_auth_onboarding.TestSignupAndLogin" name="test_signup_then_login_then_create_workspace" time="0.307"><failure message="AssertionError: Signup failed: {&quot;detail&quot;:&quot;Failed to create account&quot;}&#10;assert 400 == 200&#10; +  where 400 = &lt;Response [400]&gt;.status_code">backend/tests/test_auth_onboarding.py:99: in test_signup_then_login_then_create_workspace
+    assert signup_response.status_code == 200, f"Signup failed: {signup_response.text}"
+E   AssertionError: Signup failed: {"detail":"Failed to create account"}
+E   assert 400 == 200
+E    +  where 400 = &lt;Response [400]&gt;.status_code</failure></testcase><testcase classname="backend.tests.test_auth_onboarding.TestJoinWorkspace" name="test_join_with_valid_invite_code" time="0.654"><failure message="supabase_auth.errors.AuthApiError: Invalid login credentials">/root/.venv/lib/python3.11/site-packages/supabase_auth/_sync/gotrue_base_api.py:73: in _request
+    response.raise_for_status()
+/root/.venv/lib/python3.11/site-packages/httpx/_models.py:829: in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+E   httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://wtqomgdpukdyxdmvilrj.supabase.co/auth/v1/token?grant_type=password'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+During handling of the above exception, another exception occurred:
+backend/tests/test_auth_onboarding.py:169: in test_join_with_valid_invite_code
+    founder_auth = supabase.auth.sign_in_with_password({"email": founder_email, "password": password})
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/root/.venv/lib/python3.11/site-packages/supabase_auth/_sync/gotrue_client.py:308: in sign_in_with_password
+    response = self._request(
+/root/.venv/lib/python3.11/site-packages/supabase_auth/_sync/gotrue_base_api.py:76: in _request
+    raise handle_exception(e)  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   supabase_auth.errors.AuthApiError: Invalid login credentials</failure></testcase><testcase classname="backend.tests.test_auth_onboarding.TestJoinWorkspace" name="test_join_with_invalid_invite_code" time="0.610"><failure message="supabase_auth.errors.AuthApiError: Invalid login credentials">/root/.venv/lib/python3.11/site-packages/supabase_auth/_sync/gotrue_base_api.py:73: in _request
+    response.raise_for_status()
+/root/.venv/lib/python3.11/site-packages/httpx/_models.py:829: in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+E   httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://wtqomgdpukdyxdmvilrj.supabase.co/auth/v1/token?grant_type=password'
+E   For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+During handling of the above exception, another exception occurred:
+backend/tests/test_auth_onboarding.py:230: in test_join_with_invalid_invite_code
+    auth = supabase.auth.sign_in_with_password({"email": member_email, "password": password})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/root/.venv/lib/python3.11/site-packages/supabase_auth/_sync/gotrue_client.py:308: in sign_in_with_password
+    response = self._request(
+/root/.venv/lib/python3.11/site-packages/supabase_auth/_sync/gotrue_base_api.py:76: in _request
+    raise handle_exception(e)  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   supabase_auth.errors.AuthApiError: Invalid login credentials</failure></testcase><testcase classname="backend.tests.test_auth_onboarding.TestDemoMode" name="test_demo_setup_creates_data" time="0.665"><failure message="AssertionError: Demo setup failed: {&quot;detail&quot;:&quot;Demo setup failed: E11000 duplicate key error collection: startupops.startups index: invite_code_1 dup key: { invite_code: \&quot;DEMO2026\&quot; }, full error: {'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: startupops.startups index: invite_code_1 dup key: { invite_code: \&quot;DEMO2026\&quot; }', 'keyPattern': {'invite_code': 1}, 'keyValue': {'invite_code': 'DEMO2026'}}&quot;}&#10;assert 520 == 200&#10; +  where 520 = &lt;Response [520]&gt;.status_code">backend/tests/test_auth_onboarding.py:246: in test_demo_setup_creates_data
+    assert response.status_code == 200, f"Demo setup failed: {response.text}"
+E   AssertionError: Demo setup failed: {"detail":"Demo setup failed: E11000 duplicate key error collection: startupops.startups index: invite_code_1 dup key: { invite_code: \"DEMO2026\" }, full error: {'index': 0, 'code': 11000, 'errmsg': 'E11000 duplicate key error collection: startupops.startups index: invite_code_1 dup key: { invite_code: \"DEMO2026\" }', 'keyPattern': {'invite_code': 1}, 'keyValue': {'invite_code': 'DEMO2026'}}"}
+E   assert 520 == 200
+E    +  where 520 = &lt;Response [520]&gt;.status_code</failure></testcase><testcase classname="backend.tests.test_auth_onboarding.TestDemoMode" name="test_demo_user_can_login" time="1.375"><failure message="AssertionError: assert 'Demo Workspace Test' == 'NexaFlow AI'&#10;  &#10;  - NexaFlow AI&#10;  + Demo Workspace Test">backend/tests/test_auth_onboarding.py:273: in test_demo_user_can_login
+    assert demo_startup["name"] == "NexaFlow AI"
+E   AssertionError: assert 'Demo Workspace Test' == 'NexaFlow AI'
+E     
+E     - NexaFlow AI
+E     + Demo Workspace Test</failure></testcase></testsuite></testsuites>
