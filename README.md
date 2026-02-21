@@ -11,9 +11,9 @@ A unified digital platform for early-stage founders to manage execution, validat
 ## Tech Stack
 
 - **Frontend**: React 18 + Tailwind CSS + Shadcn/UI + Supabase Auth Client
-- **Backend**: FastAPI (Python) + Motor (Async MongoDB) + Supabase Admin SDK
-- **Database**: MongoDB (application data) + Supabase (authentication)
-- **AI**: Google Gemini 2.5 Flash via emergentintegrations library
+- **Backend**: FastAPI (Python) + Supabase Admin SDK
+- **Database**: Supabase (PostgreSQL) with Auth, Real-Time, and Row Level Security
+- **AI**: Google Gemini 2.5 Flash
 
 ## Features
 
@@ -37,7 +37,6 @@ A unified digital platform for early-stage founders to manage execution, validat
 
 - Node.js 18+ and Yarn
 - Python 3.10+
-- MongoDB 6.0+ (local or Atlas)
 - Supabase account (free tier works)
 - Google Gemini API key (for AI features)
 
@@ -48,10 +47,6 @@ A unified digital platform for early-stage founders to manage execution, validat
 ### Backend (`/backend/.env`)
 
 ```env
-# MongoDB Connection
-MONGO_URL=mongodb://localhost:27017
-DB_NAME=startupops
-
 # Supabase (get from Supabase Dashboard > Settings > API)
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_ANON_KEY=your-anon-key
@@ -80,247 +75,232 @@ REACT_APP_SITE_URL=http://localhost:3000
 
 ---
 
-## MongoDB Schema
+## Database Schema (PostgreSQL via Supabase)
 
-### Collections
+All tables are managed via Supabase with Row Level Security (RLS) policies enforcing access control.
+
+### Tables
 
 #### `profiles`
 Stores user profile information synced from Supabase auth.
 
-```javascript
-{
-  "id": "uuid",                    // Supabase user ID (primary key)
-  "email": "user@example.com",
-  "full_name": "John Doe",
-  "avatar_url": "https://...",
-  "created_at": "2026-01-01T00:00:00Z",
-  "updated_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE profiles (
+  id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  email TEXT NOT NULL UNIQUE,
+  full_name TEXT,
+  avatar_url TEXT,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.profiles.createIndex({ "id": 1 }, { unique: true })
+CREATE INDEX idx_profiles_email ON profiles(email);
 ```
 
 #### `startups`
 Workspace/startup information.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "name": "My Startup",
-  "description": "What we do...",
-  "industry": "saas",              // saas, fintech, healthtech, edtech, ecommerce, ai_ml, marketplace, other
-  "stage": "mvp",                  // idea, mvp, growth, scale
-  "website": "https://...",
-  "founder_id": "uuid",            // Reference to profiles.id
-  "invite_code": "ABC123",         // 8-char uppercase code for team joins
-  "subscription_plan": "free",     // free, pro, scale
-  "created_at": "2026-01-01T00:00:00Z",
-  "updated_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE startups (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name TEXT NOT NULL,
+  description TEXT,
+  industry TEXT,
+  stage TEXT,
+  website TEXT,
+  founder_id UUID NOT NULL REFERENCES profiles(id),
+  invite_code TEXT UNIQUE,
+  subscription_plan TEXT DEFAULT 'free',
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.startups.createIndex({ "id": 1 }, { unique: true })
-db.startups.createIndex({ "invite_code": 1 }, { unique: true })
+CREATE INDEX idx_startups_founder ON startups(founder_id);
+CREATE INDEX idx_startups_invite_code ON startups(invite_code);
 ```
 
 #### `startup_members`
 Team membership with roles.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "user_id": "uuid",               // Reference to profiles.id
-  "role": "founder",               // founder, manager, member
-  "joined_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE startup_members (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  user_id UUID NOT NULL REFERENCES profiles(id) ON DELETE CASCADE,
+  role TEXT DEFAULT 'member',
+  joined_at TIMESTAMP DEFAULT NOW(),
+  UNIQUE(startup_id, user_id)
+);
 
-// Indexes
-db.startup_members.createIndex({ "startup_id": 1, "user_id": 1 }, { unique: true })
+CREATE INDEX idx_startup_members_startup ON startup_members(startup_id);
+CREATE INDEX idx_startup_members_user ON startup_members(user_id);
 ```
 
 #### `tasks`
 Task items for the Kanban board.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "title": "Task title",
-  "description": "Task details...",
-  "status": "todo",                // todo, in_progress, review, done
-  "priority": "medium",            // low, medium, high, urgent
-  "assigned_to": "uuid",           // Reference to profiles.id (nullable)
-  "created_by": "uuid",            // Reference to profiles.id
-  "milestone_id": "uuid",          // Reference to milestones.id (nullable)
-  "due_date": "2026-02-01",        // ISO date string (nullable)
-  "created_at": "2026-01-01T00:00:00Z",
-  "updated_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE tasks (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  title TEXT NOT NULL,
+  description TEXT,
+  status TEXT DEFAULT 'todo',
+  priority TEXT DEFAULT 'medium',
+  assigned_to UUID REFERENCES profiles(id),
+  created_by UUID NOT NULL REFERENCES profiles(id),
+  milestone_id UUID,
+  due_date DATE,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.tasks.createIndex({ "id": 1 }, { unique: true })
-db.tasks.createIndex({ "startup_id": 1 })
-db.tasks.createIndex({ "milestone_id": 1 })
-db.tasks.createIndex({ "assigned_to": 1 })
+CREATE INDEX idx_tasks_startup ON tasks(startup_id);
+CREATE INDEX idx_tasks_milestone ON tasks(milestone_id);
+CREATE INDEX idx_tasks_assigned ON tasks(assigned_to);
 ```
 
 #### `milestones`
 Project milestones with target dates.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "title": "MVP Launch",
-  "description": "Launch details...",
-  "target_date": "2026-03-01",     // ISO date string
-  "status": "pending",             // pending, in_progress, completed
-  "created_at": "2026-01-01T00:00:00Z",
-  "updated_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE milestones (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  title TEXT NOT NULL,
+  description TEXT,
+  target_date DATE,
+  status TEXT DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.milestones.createIndex({ "id": 1 }, { unique: true })
-db.milestones.createIndex({ "startup_id": 1 })
+CREATE INDEX idx_milestones_startup ON milestones(startup_id);
 ```
 
 #### `feedback`
 Customer/internal feedback entries.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "title": "Feedback title",
-  "content": "Detailed feedback...",
-  "category": "product",           // product, technical, business, market
-  "rating": 4,                     // 1-5 scale
-  "submitted_by": "uuid",          // Reference to profiles.id
-  "source": "internal",            // internal, external
-  "created_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE feedback (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  title TEXT NOT NULL,
+  content TEXT,
+  category TEXT,
+  rating INTEGER,
+  submitted_by UUID REFERENCES profiles(id),
+  source TEXT DEFAULT 'internal',
+  created_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.feedback.createIndex({ "startup_id": 1 })
-db.feedback.createIndex({ "category": 1 })
+CREATE INDEX idx_feedback_startup ON feedback(startup_id);
+CREATE INDEX idx_feedback_category ON feedback(category);
 ```
 
 #### `subscriptions`
 Subscription/billing information.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "plan": "free",                  // free, pro, scale
-  "status": "active",              // active, cancelled, past_due
-  "created_at": "2026-01-01T00:00:00Z",
-  "updated_at": "2026-01-01T00:00:00Z"
-}
-
-// Indexes
-db.subscriptions.createIndex({ "startup_id": 1 }, { unique: true })
+```sql
+CREATE TABLE subscriptions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL UNIQUE REFERENCES startups(id) ON DELETE CASCADE,
+  plan TEXT DEFAULT 'free',
+  status TEXT DEFAULT 'active',
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
 ```
 
 #### `investor_swipes`
 Investor swipe history (liked/passed startups).
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "investor_id": "uuid",           // Reference to profiles.id
-  "startup_id": "uuid",            // Reference to startups.id
-  "action": "interested",          // interested, passed
-  "swiped_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE investor_swipes (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  investor_id UUID NOT NULL REFERENCES profiles(id) ON DELETE CASCADE,
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  action TEXT DEFAULT 'interested',
+  swiped_at TIMESTAMP DEFAULT NOW(),
+  UNIQUE(investor_id, startup_id)
+);
 
-// Indexes
-db.investor_swipes.createIndex({ "investor_id": 1, "startup_id": 1 }, { unique: true })
-db.investor_swipes.createIndex({ "investor_id": 1 })
+CREATE INDEX idx_investor_swipes_investor ON investor_swipes(investor_id);
+CREATE INDEX idx_investor_swipes_startup ON investor_swipes(startup_id);
 ```
 
 #### `investments`
 Investment records (from investors or founders).
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "investor_name": "John Investor", // Investor or fund name
-  "amount": 100000,                // Investment amount in INR
-  "equity_percentage": 5.5,        // Equity given (nullable)
-  "investment_type": "seed",       // pre-seed, seed, angel, series-a, series-b, other
-  "date": "2026-01-01",            // ISO date string
-  "notes": "Additional details...", // Optional notes
-  "created_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE investments (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  investor_name TEXT NOT NULL,
+  amount DECIMAL(12, 2),
+  equity_percentage DECIMAL(5, 2),
+  investment_type TEXT,
+  date DATE,
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.investments.createIndex({ "startup_id": 1 })
-db.investments.createIndex({ "id": 1 }, { unique: true })
+CREATE INDEX idx_investments_startup ON investments(startup_id);
 ```
 
 #### `income`
 Revenue/income tracking by category.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "title": "Income source name",
-  "amount": 50000,                 // Amount in INR
-  "category": "revenue",           // revenue, investment, grant, other
-  "date": "2026-01-01",            // ISO date string
-  "notes": "Optional details...",
-  "created_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE income (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  title TEXT NOT NULL,
+  amount DECIMAL(12, 2),
+  category TEXT,
+  date DATE,
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.income.createIndex({ "startup_id": 1 })
-db.income.createIndex({ "category": 1 })
+CREATE INDEX idx_income_startup ON income(startup_id);
+CREATE INDEX idx_income_category ON income(category);
 ```
 
 #### `expenses`
 Expense tracking by category.
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "title": "Expense description",
-  "amount": 5000,                  // Amount in INR
-  "category": "salary",            // salary, marketing, operations, infrastructure, legal, other
-  "date": "2026-01-01",            // ISO date string
-  "notes": "Optional details...",
-  "created_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE expenses (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  title TEXT NOT NULL,
+  amount DECIMAL(12, 2),
+  category TEXT,
+  date DATE,
+  notes TEXT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.expenses.createIndex({ "startup_id": 1 })
-db.expenses.createIndex({ "category": 1 })
+CREATE INDEX idx_expenses_startup ON expenses(startup_id);
+CREATE INDEX idx_expenses_category ON expenses(category);
 ```
 
 #### `ai_history`
 AI generation history (insights, pitch decks).
 
-```javascript
-{
-  "id": "uuid",                    // Primary key
-  "startup_id": "uuid",            // Reference to startups.id
-  "ai_type": "insights",           // insights, pitch
-  "content": "{ ...generated content... }",
-  "metadata": {                    // Optional metadata
-    "slide_count": 10,
-    "model": "gemini-2.5-flash"
-  },
-  "created_at": "2026-01-01T00:00:00Z"
-}
+```sql
+CREATE TABLE ai_history (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  startup_id UUID NOT NULL REFERENCES startups(id) ON DELETE CASCADE,
+  ai_type TEXT,
+  content JSONB,
+  metadata JSONB,
+  created_at TIMESTAMP DEFAULT NOW()
+);
 
-// Indexes
-db.ai_history.createIndex({ "startup_id": 1 })
-db.ai_history.createIndex({ "ai_type": 1 })
+CREATE INDEX idx_ai_history_startup ON ai_history(startup_id);
+CREATE INDEX idx_ai_history_type ON ai_history(ai_type);
 ```
 
 ---
@@ -355,29 +335,9 @@ yarn install
    - Add `http://localhost:3000/auth/callback` to Redirect URLs
 4. Copy API keys from **Settings > API**
 
-### 3. Setup MongoDB
+### 3. Setup Supabase Database Tables
 
-```bash
-# Using Docker
-docker run -d --name mongodb -p 27017:27017 mongo:6.0
-
-# Or install locally and start
-mongod --dbpath /path/to/data
-
-# Create database and indexes (optional - app creates them on startup)
-mongosh
-use startupops
-db.profiles.createIndex({ "id": 1 }, { unique: true })
-db.startups.createIndex({ "id": 1 }, { unique: true })
-db.startups.createIndex({ "invite_code": 1 }, { unique: true })
-db.startup_members.createIndex({ "startup_id": 1, "user_id": 1 })
-db.tasks.createIndex({ "id": 1 }, { unique: true })
-db.tasks.createIndex({ "startup_id": 1 })
-db.milestones.createIndex({ "id": 1 }, { unique: true })
-db.milestones.createIndex({ "startup_id": 1 })
-db.feedback.createIndex({ "startup_id": 1 })
-db.subscriptions.createIndex({ "startup_id": 1 })
-```
+See SUPABASE_SETUP.md for detailed SQL schema and setup instructions. The database tables are automatically created via the SQL file when you initialize your Supabase project.
 
 ### 4. Configure Environment Variables
 
@@ -402,27 +362,19 @@ Access the app at `http://localhost:3000`
 
 ## Production Deployment
 
-### Option 1: Docker Compose
+### Option 1: Docker Compose (Frontend + Backend only)
 
 ```yaml
 # docker-compose.yml
 version: '3.8'
 
 services:
-  mongodb:
-    image: mongo:6.0
-    volumes:
-      - mongo_data:/data/db
-    restart: unless-stopped
-
   backend:
     build: ./backend
     ports:
       - "8001:8001"
     env_file:
       - ./backend/.env
-    depends_on:
-      - mongodb
     restart: unless-stopped
 
   frontend:
@@ -434,10 +386,9 @@ services:
     depends_on:
       - backend
     restart: unless-stopped
-
-volumes:
-  mongo_data:
 ```
+
+**Note**: Database is hosted on Supabase (cloud), not locally.
 
 ### Option 2: Cloud Platforms
 
@@ -448,7 +399,7 @@ volumes:
 - Vercel, Netlify, Cloudflare Pages
 
 **Database:**
-- MongoDB Atlas (recommended for production)
+- Supabase (PostgreSQL) - recommended for production
 
 ### Supabase Production Setup
 
