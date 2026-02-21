@@ -1,0 +1,724 @@
+2026-02-21 16:32:26,234 - server - INFO - CORS configured: ['http://localhost:3000', 'https://your-domain.com', 'https://startup-gamma-seven.vercel.app', 'http://127.0.0.1:3000']
+INFO:     Started server process [39076]
+INFO:     Waiting for application startup.
+2026-02-21 16:32:26,260 - server - INFO - StartupOps API starting (Supabase PostgreSQL backend)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-02-21 16:33:55,143 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/admin/users "HTTP/2 200 OK"
+2026-02-21 16:33:57,470 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/admin/users "HTTP/2 200 OK"
+2026-02-21 16:33:59,737 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/admin/users "HTTP/2 422 Unprocessable Entity"
+2026-02-21 16:34:02,047 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/admin/users "HTTP/2 200 OK"
+2026-02-21 16:34:06,976 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/admin/users "HTTP/2 200 OK"
+2026-02-21 16:34:09,994 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/admin/users "HTTP/2 200 OK"
+2026-02-21 16:34:18,048 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 403 Forbidden"
+2026-02-21 16:34:18,049 - server - ERROR - Auth error: AuthApiError: invalid JWT: unable to parse or verify signature, token is unverifiable: error while executing keyfunc: unrecognized JWT kid d23f3237-d6bc-498a-810c-f715c247438d for algorithm ES256
+2026-02-21 17:02:51,651 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:51,653 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:53,109 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:53,322 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles "HTTP/2 201 Created"
+2026-02-21 17:02:53,510 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:53,511 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:53,692 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:53,874 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:53,876 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:54,050 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:54,225 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:54,226 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:54,404 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:54,592 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:54,593 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:54,764 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:54,939 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:54,941 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:55,109 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:55,295 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:55,297 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:55,468 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:55,644 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:55,646 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:55,820 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:55,993 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:55,994 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:56,170 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:56,339 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:56,341 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:56,513 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:56,690 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:56,691 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:56,872 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:57,060 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:57,061 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:57,235 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:57,414 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:57,416 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:57,591 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:02:57,776 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:02:57,778 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:02:57,954 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:45,740 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:45,742 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:46,336 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups "HTTP/2 201 Created"
+2026-02-21 17:03:46,583 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members "HTTP/2 201 Created"
+2026-02-21 17:03:46,807 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:46,809 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:47,077 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:47,301 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:03:47,611 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:47,613 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:47,836 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:48,066 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:48,292 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:48,520 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/feedback?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:48,757 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:48,955 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:48,958 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:49,304 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:49,590 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:49,788 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:49,789 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:49,985 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:50,224 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:50,649 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:50,651 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:50,918 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:51,341 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:51,667 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:52,040 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/feedback?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:52,595 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:52,823 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:52,824 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:53,221 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:53,416 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:53,694 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:53,696 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:53,990 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:54,201 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:54,527 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:54,530 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:54,861 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:55,122 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:55,505 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:55,507 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:55,713 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:56,371 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:57,023 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:57,025 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:57,477 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:57,728 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:57,976 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:03:58,317 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:58,319 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:58,528 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:58,780 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:58,977 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:58,979 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:59,191 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:03:59,522 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:03:59,722 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:03:59,724 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:03:59,904 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:00,110 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:00,325 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:04:01,971 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:01,971 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:02,180 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:02,511 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:02,756 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:02,758 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:02,992 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:03,242 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:04,160 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:04,161 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:04,480 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:04,722 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:04,911 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:05,199 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/feedback?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:05,409 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:05,623 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:05,625 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:05,894 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:06,142 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:06,332 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:06,334 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:06,521 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:06,713 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:06,897 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:06,899 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:07,199 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:07,400 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:07,587 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:07,774 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/feedback?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:08,088 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:08,314 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:08,316 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:08,525 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:08,719 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:08,909 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:08,910 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:09,171 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:09,402 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:19,867 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:19,867 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:20,966 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:21,242 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:21,935 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:21,938 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:22,286 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:22,482 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:22,719 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:22,720 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:23,027 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:23,350 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:23,683 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:04:23,986 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:23,987 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:24,194 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:24,394 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:24,593 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:24,594 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:24,788 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:25,584 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:25,879 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:25,880 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:26,267 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:26,712 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:04:27,057 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:04:57,335 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:04:57,337 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:04:58,097 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:04:58,608 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks "HTTP/2 400 Bad Request"
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\github\Startup-Ops\backend\server.py", line 371, in create_task
+    supabase_client.table("tasks").insert(task).execute()
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\postgrest\_sync\request_builder.py", line 53, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': 'invalid input syntax for type uuid: "none"', 'code': '22P02', 'hint': None, 'details': None}
+2026-02-21 17:07:16,841 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:16,842 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:17,610 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:17,831 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:17,834 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:18,170 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:18,447 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:07:18,647 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:18,648 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:18,927 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:19,177 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:19,180 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:19,373 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:19,562 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:07:19,770 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:19,771 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:20,218 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:20,595 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:20,776 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:20,777 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:20,973 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:21,185 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:21,370 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:21,372 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:21,556 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:21,749 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:21,750 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:21,931 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:22,159 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:22,336 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:07:22,586 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:22,587 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:22,794 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:23,045 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:23,267 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:23,270 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:23,463 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:23,671 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:23,839 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:23,840 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:24,012 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:24,194 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:24,195 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:24,372 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:24,549 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:24,732 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:07:24,903 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:24,904 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:25,081 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:25,253 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:07:25,471 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:25,473 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:25,653 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:25,826 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:26,007 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:26,009 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:26,187 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:26,365 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:26,539 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:26,541 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:26,707 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:26,873 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:27,041 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:07:27,213 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:27,214 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:27,389 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:27,556 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:07:27,728 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:27,729 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:27,909 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:28,073 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:28,244 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:28,246 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:28,419 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:28,601 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:28,781 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:07:28,782 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:07:28,957 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:07:29,145 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:07:29,331 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:11:16,882 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:16,885 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:17,469 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:17,841 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:17,843 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:18,029 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:18,207 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:18,210 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:18,477 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:18,665 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:11:18,955 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:18,957 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:19,377 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:19,917 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:19,921 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:20,204 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:20,399 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:11:20,831 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:20,833 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:21,127 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:21,581 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:11:22,356 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:22,359 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:22,724 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:22,965 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:23,321 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:23,323 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:23,541 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:23,847 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:24,156 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:24,159 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:24,493 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:24,850 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:25,584 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:11:25,864 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:25,865 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:26,260 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:26,473 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:26,474 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:26,889 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:27,397 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:11:27,663 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:27,664 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:27,834 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:28,098 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:28,303 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:28,304 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:28,787 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:28,963 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:29,307 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:11:29,661 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:29,663 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:30,030 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:30,435 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:30,821 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:30,821 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:31,070 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:31,363 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:31,364 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:31,549 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:31,787 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:11:32,061 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:32,062 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:32,309 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:32,689 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:32,957 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:33,301 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/feedback?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:33,520 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:33,739 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:33,741 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:33,924 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:34,252 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:34,554 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:34,556 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:34,981 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:35,386 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:35,631 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:35,632 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:35,881 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:36,218 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:36,220 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:36,536 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:36,716 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:36,978 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:37,223 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/feedback?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:37,407 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:37,590 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:37,592 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:37,994 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:38,225 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:38,433 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:38,436 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:38,685 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:38,891 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:39,073 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:39,074 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:39,267 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:39,484 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:11:39,741 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:39,742 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:39,967 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:40,361 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:40,561 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:40,745 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/feedback?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:41,052 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:41,289 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:41,290 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:41,537 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:41,733 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:41,990 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:41,991 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:42,203 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:42,436 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:42,672 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:42,674 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:42,899 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:43,070 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:43,296 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:11:43,524 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:43,526 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:43,834 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:44,150 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:44,597 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:44,600 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:44,799 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:45,019 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:45,345 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:45,347 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:45,592 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:45,910 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:46,152 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:11:46,332 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:46,333 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:46,617 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:46,814 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:47,119 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:47,120 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:47,529 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:47,765 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:48,308 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:48,311 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:48,487 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:48,683 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:48,860 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:11:49,055 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:49,056 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:49,262 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:49,505 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:11:49,681 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:11:49,682 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:11:49,893 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:11:50,095 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:12:00,077 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:12:00,079 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:12:00,356 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:12:00,544 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks "HTTP/2 400 Bad Request"
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\github\Startup-Ops\backend\server.py", line 371, in create_task
+    "assigned_to": body.assigned_to,
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\postgrest\_sync\request_builder.py", line 53, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': 'invalid input syntax for type uuid: "none"', 'code': '22P02', 'hint': None, 'details': None}
+2026-02-21 17:13:27,296 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:27,297 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:27,579 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:27,801 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:27,803 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:27,985 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:28,167 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:28,169 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:28,349 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:28,563 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:13:28,785 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:28,787 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:28,982 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:29,167 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:29,169 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:29,350 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:29,515 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:13:29,699 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:29,701 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:29,867 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:30,039 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:30,040 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:30,256 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:30,435 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:13:30,642 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:30,643 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:30,809 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:30,980 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:30,981 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:31,160 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:31,327 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:13:31,500 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:31,502 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:31,686 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:31,861 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:32,043 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:32,044 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:32,240 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:32,462 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:32,750 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:32,752 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:32,989 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:33,176 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:33,389 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:13:33,621 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:33,622 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:33,815 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:34,012 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:34,013 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:34,207 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:34,423 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:13:34,627 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:34,629 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:34,798 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:34,967 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:35,157 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:35,159 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:35,322 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:35,532 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:35,757 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:35,760 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:35,939 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:36,140 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:36,312 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:13:36,537 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:36,539 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:36,739 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:37,005 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:13:37,185 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:37,186 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:37,394 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:37,605 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:37,846 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:37,848 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:38,145 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:38,377 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:38,590 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:38,591 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:38,791 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:39,026 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:39,207 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:13:39,426 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:39,427 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:39,597 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:39,782 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:39,963 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:39,965 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:40,137 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:40,319 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:40,494 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:40,495 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:40,674 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:40,847 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:41,011 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:13:41,181 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:41,227 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:41,406 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:41,577 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:41,753 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:41,755 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:41,925 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:42,093 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:42,298 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:42,300 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:42,475 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:42,657 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:42,833 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:13:43,044 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:43,046 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:43,256 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:43,424 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:43,635 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:43,636 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:43,815 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:43,983 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/milestones?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:44,157 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:44,159 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:44,335 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:44,507 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2 "HTTP/2 200 OK"
+2026-02-21 17:13:44,673 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=in.%286d5a6869-c146-4e03-8860-f71d56250b1c%29 "HTTP/2 200 OK"
+2026-02-21 17:13:49,085 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:13:49,086 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:13:49,259 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&startup_id=eq.1dbaa077-217a-4b75-a7cf-06d9d5bcdae2&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:13:49,482 - httpx - INFO - HTTP Request: POST https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/tasks "HTTP/2 400 Bad Request"
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\github\Startup-Ops\backend\server.py", line 371, in create_task
+    supabase_client.table("tasks").insert(task).execute()
+  File "C:\Users\jakku\AppData\Local\Programs\Python\Python312\Lib\site-packages\postgrest\_sync\request_builder.py", line 53, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': 'invalid input syntax for type uuid: ""', 'code': '22P02', 'hint': None, 'details': None}
+2026-02-21 17:14:54,977 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:14:54,978 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:14:55,839 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:14:56,346 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:14:56,347 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:14:56,636 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:14:56,936 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:14:56,937 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:14:57,532 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:14:57,923 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:14:57,926 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:14:58,290 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:14:58,626 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:14:58,661 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:14:58,877 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startup_members?select=%2A&user_id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
+2026-02-21 17:14:59,081 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/startups?select=%2A&id=in.%281dbaa077-217a-4b75-a7cf-06d9d5bcdae2%29 "HTTP/2 200 OK"
+2026-02-21 17:14:59,303 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-02-21 17:14:59,304 - server - INFO - User authenticated: jhonsamliv@gmail.com
+2026-02-21 17:14:59,533 - httpx - INFO - HTTP Request: GET https://euthfgalzinzjfslcfmy.supabase.co/rest/v1/profiles?select=%2A&id=eq.6d5a6869-c146-4e03-8860-f71d56250b1c "HTTP/2 200 OK"
