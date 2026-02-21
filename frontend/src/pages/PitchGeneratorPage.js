@@ -24,7 +24,7 @@ export default function PitchGeneratorPage() {
     if (currentStartup && showHistory) {
       loadHistory();
     }
-  }, [showHistory, currentStartup]);
+  }, [showHistory, currentStartup]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Only founders can access pitch generator
   if (userRole !== 'founder') {

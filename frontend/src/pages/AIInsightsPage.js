@@ -31,7 +31,7 @@ export default function AIInsightsPage() {
     if (currentStartup && showHistory) {
       loadHistory();
     }
-  }, [showHistory, currentStartup]);
+  }, [showHistory, currentStartup]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Investors should not see AI insights page
   if (userRole === 'investor') {

@@ -179,7 +179,7 @@ export function AuthProvider({ children }) {
         data.unsubscribe();
       }
     };
-  }, [fetchProfile, fetchStartups]);
+  }, [fetchProfile, fetchStartups]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /* -----------------------------
      ACTIONS
