@@ -84,7 +84,13 @@ app.add_middleware(
     allow_origins=cors_origins if cors_origins else ['*'],
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_origin_regex=".*",
 )
+
+# Handle OPTIONS requests (preflight)
+@app.options("/{full_path:path}")
+async def preflight_handler(full_path: str):
+    return {"status": "ok"}
 
 # ==================== PYDANTIC MODELS ====================
 
