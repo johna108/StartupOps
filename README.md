@@ -3,6 +3,9 @@
 A unified digital platform for early-stage founders to manage execution, validate ideas, collaborate with teams, and gain AI-powered insights. Includes investor discovery and portfolio management.
 
 **Latest Updates (Feb 2026):**
+- ✅ **Vercel Deployment**: Full-stack deployed on Vercel (Frontend + Backend Serverless)
+- ✅ **CORS Fixed**: Resolved double-slash redirect issues affecting preflight requests
+- ✅ **Backend Serverless**: FastAPI running on Vercel with proper OPTIONS handler
 - ✅ **Investor Features**: Swipe-based startup discovery, investment portfolio tracking, and Manage Investors portal
 - ✅ **Real-Time Metrics**: Live financial calculations (runway, burn rate, team size, total raised)
 - ✅ **Enhanced Finance Dashboard**: Income/expense categories, investment tracking with equity percentages
