@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { CheckCircle2, ClipboardList, Target, MessageSquare, Users, TrendingUp, Heart, Rocket } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
 
 export default function DashboardOverview() {
   const { currentStartup, getAuthHeaders, userRole } = useAuth();

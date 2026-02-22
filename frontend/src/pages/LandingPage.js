@@ -8,7 +8,7 @@ import { toast } from 'sonner';
 import { ArrowRight, BarChart3, CheckCircle2, Lightbulb, Loader2, LogOut, Moon, Play, Sparkles, Sun, Target, Users } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
 
 export default function LandingPage() {
   const navigate = useNavigate();

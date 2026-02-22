@@ -12,7 +12,7 @@ import { toast } from 'sonner';
 import { Plus, GripVertical, Calendar, Trash2, Edit2, Lock } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
 
 const columns = [
   { key: 'todo', label: 'To Do', color: 'border-muted-foreground/30' },

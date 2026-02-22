@@ -12,7 +12,7 @@ import { toast } from 'sonner';
 import { Plus, MessageSquare, Star, Filter } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
 const categories = ['product', 'market', 'technical', 'business'];
 
 export default function FeedbackPage() {

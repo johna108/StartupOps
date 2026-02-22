@@ -8,7 +8,7 @@ import { toast } from 'sonner';
 import { Lightbulb, Sparkles, Target, TrendingUp, Loader2, History, Trash2 } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
 
 const insightTypes = [
   { key: 'general', label: 'General Insights', icon: Lightbulb, desc: 'Get overall analysis and actionable recommendations' },

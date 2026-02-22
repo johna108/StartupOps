@@ -12,7 +12,7 @@ import { toast } from 'sonner';
 import { Plus, Target, Calendar, Trash2, Edit2, CheckCircle2 } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
 
 export default function MilestonesPage() {
   const { currentStartup, getAuthHeaders, userRole } = useAuth();
