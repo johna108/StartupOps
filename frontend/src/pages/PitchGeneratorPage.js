@@ -7,7 +7,7 @@ import { toast } from 'sonner';
 import { Presentation, Loader2, Download, RefreshCw, ChevronLeft, ChevronRight, History, Trash2 } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').trim().replace(/\/+$/, '')}/api`;
 
 export default function PitchGeneratorPage() {
   const { currentStartup, getAuthHeaders, userRole } = useAuth();

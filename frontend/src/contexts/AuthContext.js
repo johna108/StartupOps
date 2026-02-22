@@ -21,8 +21,8 @@ if (!USER_BACKEND_URL) {
   throw new Error("❌ BACKEND URL NOT SET");
 }
 
-// Remove trailing slash if present
-const BACKEND_URL = USER_BACKEND_URL.replace(/\/$/, "");
+// Remove trailing slash if present (robustly)
+const BACKEND_URL = USER_BACKEND_URL.trim().replace(/\/+$/, "");
 
 const API = `${BACKEND_URL}/api`;
 

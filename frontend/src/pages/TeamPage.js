@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 import { Users, Copy, RefreshCw, Trash2, Crown, UserPlus, Shield, User, Briefcase } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').trim().replace(/\/+$/, '')}/api`;
 
 // Role badge styling
 const roleBadgeStyles = {

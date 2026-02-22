@@ -5,7 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { BarChart3, Target, MessageSquare, CheckCircle2, TrendingUp } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${(process.env.REACT_APP_BACKEND_URL || '').replace(/\/$/, '')}/api`;
+const API = `${(process.env.REACT_APP_BACKEND_URL || '').trim().replace(/\/+$/, '')}/api`;
 const COLORS = ['hsl(24.6, 95%, 53.1%)', 'hsl(173, 58%, 39%)', 'hsl(197, 37%, 24%)', 'hsl(43, 74%, 66%)'];
 
 export default function AnalyticsPage() {
