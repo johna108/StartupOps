@@ -19,6 +19,16 @@ export default function AuthPage() {
   const [tab, setTab] = useState('login');
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add('dark');
+    return () => {
+      if (savedTheme !== 'dark') {
+        document.documentElement.classList.remove('dark');
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
       if (event === 'SIGNED_IN') {
         toast.success('Welcome to StartupOps!');
@@ -119,7 +129,7 @@ export default function AuthPage() {
           <ArrowLeft className="mr-2 h-4 w-4" /> Back
         </Button>
 
-        <Card className="glass-card border-border/50">
+        <Card className="glass-card border-border">
           <CardHeader className="text-center pb-2">
             <div className="flex items-center justify-center gap-2 mb-2">
               <Sparkles className="h-7 w-7 text-primary" />
@@ -128,16 +138,6 @@ export default function AuthPage() {
             <CardDescription>Manage your startup execution journey</CardDescription>
           </CardHeader>
           <CardContent>
-            {/* Demo Mode Button */}
-            <Button 
-              className="w-full mb-4 h-12 rounded-xl bg-gradient-to-r from-primary to-orange-600 text-primary-foreground font-semibold hover:opacity-90 transition-opacity" 
-              onClick={handleDemoLogin} 
-              disabled={demoLoading}
-              data-testid="demo-login-btn"
-            >
-              {demoLoading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Setting up demo...</> : <><Play className="mr-2 h-4 w-4" /> Try Demo (Pre-populated Data)</>}
-            </Button>
-
             <div className="relative my-3">
               <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-border" /></div>
               <div className="relative flex justify-center text-xs uppercase"><span className="bg-card px-2 text-muted-foreground">or sign in</span></div>

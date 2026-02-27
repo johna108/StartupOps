@@ -129,7 +129,7 @@ export default function MilestonesPage() {
                   {m.target_date && <span className="text-xs text-muted-foreground flex items-center gap-1"><Calendar className="h-3 w-3" />{m.target_date.split('T')[0]}</span>}
                   <div className="flex gap-1">
                     {['pending', 'in_progress', 'completed'].filter(s => s !== m.status).map(s => (
-                      <button key={s} onClick={() => handleStatusChange(m.id, s)} className="text-[10px] px-2 py-0.5 rounded bg-muted/50 hover:bg-primary/10 hover:text-primary transition-colors" data-testid={`milestone-status-${m.id}-${s}`}>
+                      <button key={s} onClick={() => handleStatusChange(m.id, s)} className="text-[10px] px-2 py-0.5 rounded bg-muted hover:bg-primary/10 hover:text-primary transition-colors" data-testid={`milestone-status-${m.id}-${s}`}>
                         {s === 'completed' ? 'Complete' : s === 'in_progress' ? 'Start' : 'Reset'}
                       </button>
                     ))}

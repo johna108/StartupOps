@@ -251,8 +251,8 @@ export default function FinanceDashboardPage() {
         <Card className="glass-card">
           <CardContent className="pt-6">
             <div className="flex items-center gap-4">
-              <div className="h-14 w-14 rounded-xl bg-orange-500/10 flex items-center justify-center">
-                <Calendar className="h-7 w-7 text-orange-500" />
+              <div className="h-14 w-14 rounded-xl bg-yellow-500/10 flex items-center justify-center">
+                <Calendar className="h-7 w-7 text-yellow-500" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Estimated Runway</p>
@@ -387,7 +387,7 @@ export default function FinanceDashboardPage() {
             <CardContent className="pt-6">
               <div className="space-y-3">
                 {income.map((item) => (
-                  <div key={item.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/30 border border-border/30 group">
+                  <div key={item.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/50 border border-border group">
                     <div className="flex items-center gap-3">
                       <div className="h-10 w-10 rounded-lg bg-green-500/10 flex items-center justify-center">
                         <ArrowUpRight className="h-5 w-5 text-green-500" />
@@ -467,7 +467,7 @@ export default function FinanceDashboardPage() {
             <CardContent className="pt-6">
               <div className="space-y-3">
                 {expenses.map((item) => (
-                  <div key={item.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/30 border border-border/30 group">
+                  <div key={item.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/50 border border-border group">
                     <div className="flex items-center gap-3">
                       <div className="h-10 w-10 rounded-lg bg-red-500/10 flex items-center justify-center">
                         <ArrowDownRight className="h-5 w-5 text-red-500" />
@@ -553,7 +553,7 @@ export default function FinanceDashboardPage() {
             <CardContent className="pt-6">
               <div className="space-y-3">
                 {investments.map((item) => (
-                  <div key={item.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/30 border border-border/30 group">
+                  <div key={item.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/50 border border-border group">
                     <div className="flex items-center gap-3">
                       <div className="h-10 w-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
                         <HandCoins className="h-5 w-5 text-blue-500" />

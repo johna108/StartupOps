@@ -210,7 +210,7 @@ export default function PitchGeneratorPage() {
               {slides.length > 0 ? (
                 <div className="space-y-6" data-testid="pitch-slides">
                   {/* Slide Display */}
-                  <div className="bg-gradient-to-br from-primary/10 via-muted to-muted/50 rounded-xl border border-border/50 p-12 min-h-96 flex flex-col justify-between" data-testid={`slide-${currentSlideIndex}`}>
+                  <div className="bg-gradient-to-br from-primary/10 via-muted to-muted rounded-xl border border-border p-12 min-h-96 flex flex-col justify-between" data-testid={`slide-${currentSlideIndex}`}>
                     <div>
                       <h2 className="text-5xl font-bold font-['Plus_Jakarta_Sans'] mb-8 text-primary">
                         {slides[currentSlideIndex]?.title || 'Slide'}
@@ -326,7 +326,7 @@ export default function PitchGeneratorPage() {
                 ) : history.length > 0 ? (
                   <div className="space-y-2 max-h-96 overflow-y-auto">
                     {history.map(item => (
-                      <div key={item.id} className="p-3 bg-muted/50 rounded-lg border border-border/50 hover:bg-muted transition-colors">
+                      <div key={item.id} className="p-3 bg-muted/50 rounded-lg border border-border hover:bg-muted transition-colors">
                         <div className="flex items-start justify-between gap-2">
                           <div className="flex-1 min-w-0">
                             <p className="text-xs font-semibold text-primary">Pitch Deck</p>

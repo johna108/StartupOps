@@ -267,7 +267,7 @@ export default function MyInvestmentsPage() {
           ) : (
             <div className="space-y-3">
               {investments.map(inv => (
-                <div key={inv.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/30 border border-border/30 group">
+                <div key={inv.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/50 border border-border group">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <p className="font-medium">{inv.investor_name}</p>

@@ -131,7 +131,7 @@ export default function SettingsPage() {
           <CardTitle className="text-lg flex items-center gap-2"><CreditCard className="h-5 w-5 text-primary" /> Subscription</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center justify-between p-4 rounded-xl bg-muted/30 border border-border/30">
+          <div className="flex items-center justify-between p-4 rounded-xl bg-muted/50 border border-border">
             <div>
               <p className="font-medium capitalize">{currentStartup.subscription_plan || 'Free'} Plan</p>
               <p className="text-sm text-muted-foreground">

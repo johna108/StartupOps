@@ -150,7 +150,7 @@ export default function OnboardingPage() {
               {existingStartups && existingStartups.length > 0 && (
                 <button
                   onClick={() => setStep('select')}
-                  className="w-full p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/50 hover:bg-primary/5 transition-all text-left group"
+                  className="w-full p-5 rounded-xl border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all text-left group"
                   data-testid="onboarding-select-btn"
                 >
                   <div className="flex items-start gap-4">
@@ -167,8 +167,8 @@ export default function OnboardingPage() {
 
               <button
                 onClick={() => setStep('create')}
-                className="w-full p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/50 hover:bg-primary/5 transition-all text-left group"
-                data-testid="onboarding-founder-btn"
+                className="w-full p-5 rounded-xl border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all text-left group"
+                data-testid="onboarding-join-btn"
               >
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
@@ -183,7 +183,7 @@ export default function OnboardingPage() {
 
               <button
                 onClick={() => setStep('join')}
-                className="w-full p-5 rounded-xl border border-border/50 bg-card/50 hover:border-primary/50 hover:bg-primary/5 transition-all text-left group"
+                className="w-full p-5 rounded-xl border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all text-left group"
                 data-testid="onboarding-employee-btn"
               >
                 <div className="flex items-start gap-4">
@@ -200,7 +200,7 @@ export default function OnboardingPage() {
               <button
                 onClick={handleInvestorSetup}
                 disabled={loading}
-                className="w-full p-5 rounded-xl border border-border/50 bg-card/50 hover:border-green-500/50 hover:bg-green-500/5 transition-all text-left group disabled:opacity-50"
+                className="w-full p-5 rounded-xl border border-border bg-card hover:border-green-500/50 hover:bg-green-500/5 transition-all text-left group disabled:opacity-50"
                 data-testid="onboarding-investor-btn"
               >
                 <div className="flex items-start gap-4">
@@ -245,7 +245,7 @@ export default function OnboardingPage() {
                         key={startup.id}
                         onClick={() => handleSelectStartup(startup.id)}
                         disabled={loading || selectedStartupId === startup.id}
-                        className="w-full p-4 rounded-xl border border-border/50 bg-card/50 hover:border-primary/50 hover:bg-primary/5 transition-all text-left disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full p-4 rounded-xl border border-border bg-card hover:border-primary/50 hover:bg-primary/5 transition-all text-left disabled:opacity-50 disabled:cursor-not-allowed"
                         data-testid={`onboarding-startup-option-${startup.id}`}
                       >
                         <div className="flex items-center justify-between">

@@ -202,7 +202,7 @@ export default function AIInsightsPage() {
                 ) : history.length > 0 ? (
                   <div className="space-y-2 max-h-96 overflow-y-auto">
                     {history.map(item => (
-                      <div key={item.id} className="p-3 bg-muted/50 rounded-lg border border-border/50 hover:bg-muted transition-colors">
+                      <div key={item.id} className="p-3 bg-muted/50 rounded-lg border border-border hover:bg-muted transition-colors">
                         <div className="flex items-start justify-between gap-2">
                           <div className="flex-1 min-w-0">
                             <p className="text-xs font-semibold text-primary capitalize">{item.subtype}</p>

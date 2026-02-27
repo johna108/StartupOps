@@ -31,7 +31,7 @@ const stageColors = {
   'pre-seed': 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
   seed: 'bg-green-500/20 text-green-400 border-green-500/30',
   'series-a': 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
-  'series-b': 'bg-orange-500/20 text-orange-400 border-orange-500/30',
+  'series-b': 'bg-purple-500/20 text-purple-400 border-purple-500/30',
   growth: 'bg-red-500/20 text-red-400 border-red-500/30',
 };
 
@@ -130,7 +130,7 @@ function SwipeCard({ startup, onSwipe, isTop }) {
         <div className="relative bg-gradient-to-br from-primary/20 via-primary/5 to-transparent p-6 pb-4">
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-4">
-              <div className="h-16 w-16 rounded-2xl bg-background/80 backdrop-blur-sm flex items-center justify-center text-3xl shadow-lg border border-border/30">
+              <div className="h-16 w-16 rounded-2xl bg-background/80 backdrop-blur-sm flex items-center justify-center text-3xl shadow-lg border border-border">
                 {icon}
               </div>
               <div>
@@ -167,10 +167,10 @@ function SwipeCard({ startup, onSwipe, isTop }) {
               <p className="text-xs text-muted-foreground">Team Size</p>
               <p className="text-lg font-bold text-purple-500">{startup.team_size || 0}</p>
             </div>
-            <div className="rounded-xl bg-orange-500/5 border border-orange-500/10 p-3 text-center">
-              <Target className="h-5 w-5 text-orange-500 mx-auto mb-1" />
+            <div className="rounded-xl bg-purple-500/5 border border-purple-500/10 p-3 text-center">
+              <Target className="h-5 w-5 text-purple-400 mx-auto mb-1" />
               <p className="text-xs text-muted-foreground">Milestones</p>
-              <p className="text-lg font-bold text-orange-500">
+              <p className="text-lg font-bold text-purple-400">
                 {startup.milestones_completed || 0}/{startup.milestones_total || 0}
               </p>
             </div>
@@ -179,7 +179,7 @@ function SwipeCard({ startup, onSwipe, isTop }) {
           {/* Expandable Details */}
           <button
             onClick={(e) => { e.stopPropagation(); setShowDetails(!showDetails); }}
-            className="w-full flex items-center justify-center gap-2 py-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-muted/30"
+            className="w-full flex items-center justify-center gap-2 py-2 text-sm text-muted-foreground hover:text-primary transition-colors rounded-lg hover:bg-muted/50"
           >
             <Eye className="h-4 w-4" />
             {showDetails ? 'Hide Details' : 'Show More Details'}
@@ -188,7 +188,7 @@ function SwipeCard({ startup, onSwipe, isTop }) {
 
           {showDetails && (
             <div className="space-y-3 animate-in slide-in-from-top-2 duration-300">
-              <div className="rounded-xl bg-muted/20 border border-border/30 p-4 space-y-3">
+              <div className="rounded-xl bg-muted/50 border border-border p-4 space-y-3">
                 <div className="flex items-center gap-2">
                   <Building2 className="h-4 w-4 text-primary" />
                   <span className="text-sm font-medium">Founded by</span>
@@ -240,7 +240,7 @@ function MatchCard({ match, onRemove }) {
     <Card className="glass-card border-green-500/10 hover:border-green-500/30 transition-all group">
       <CardContent className="p-4">
         <div className="flex items-start gap-4">
-          <div className="h-12 w-12 rounded-xl bg-background/80 flex items-center justify-center text-2xl border border-border/30 shrink-0">
+          <div className="h-12 w-12 rounded-xl bg-background/80 flex items-center justify-center text-2xl border border-border shrink-0">
             {icon}
           </div>
           <div className="flex-1 min-w-0">
@@ -450,7 +450,7 @@ export default function InvestorFeedPage() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="h-12 w-12 rounded-full border-muted-foreground/20 hover:border-muted-foreground/50 hover:bg-muted/30"
+                  className="h-12 w-12 rounded-full border-muted-foreground/30 hover:border-muted-foreground/60 hover:bg-muted/50"
                   onClick={handleUndoSwipe}
                   disabled={currentIndex === 0}
                 >
@@ -538,7 +538,7 @@ export default function InvestorFeedPage() {
           ) : (
             <Card className="glass-card max-w-lg mx-auto">
               <CardContent className="py-16 text-center space-y-4">
-                <div className="h-20 w-20 rounded-full bg-muted/30 flex items-center justify-center mx-auto">
+                <div className="h-20 w-20 rounded-full bg-muted flex items-center justify-center mx-auto">
                   <Heart className="h-10 w-10 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold">No matches yet</h3>

@@ -177,7 +177,7 @@ export default function TasksPage() {
                   return (
                     <Card 
                       key={task.id} 
-                      className={`bg-background/60 backdrop-blur border-border/40 transition-all group ${
+                      className={`bg-card backdrop-blur border-border transition-all group ${
                         canModify ? 'hover:border-primary/30 cursor-pointer' : 'opacity-75'
                       } ${isAssignedToMe ? 'ring-1 ring-primary/30' : ''}`}
                       data-testid={`task-card-${task.id}`}
@@ -209,7 +209,7 @@ export default function TasksPage() {
                         {canModify && (
                           <div className="flex gap-1 mt-2">
                             {columns.filter(c => c.key !== task.status).map(c => (
-                              <button key={c.key} onClick={() => handleStatusChange(task.id, c.key)} className="text-[9px] px-1.5 py-0.5 rounded bg-muted/50 hover:bg-primary/10 hover:text-primary transition-colors" data-testid={`move-task-${task.id}-to-${c.key}`}>
+                              <button key={c.key} onClick={() => handleStatusChange(task.id, c.key)} className="text-[9px] px-1.5 py-0.5 rounded bg-muted hover:bg-primary/10 hover:text-primary transition-colors" data-testid={`move-task-${task.id}-to-${c.key}`}>
                                 {c.label}
                               </button>
                             ))}

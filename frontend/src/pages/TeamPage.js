@@ -131,7 +131,7 @@ export default function TeamPage() {
               const initials = (m.full_name || m.email || 'U').split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
               const RoleIcon = roleIcons[m.role] || User;
               return (
-                <div key={m.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/30 border border-border/30 group" data-testid={`member-${m.user_id}`}>
+                <div key={m.id} className="flex items-center justify-between p-3 rounded-xl bg-muted/50 border border-border group" data-testid={`member-${m.user_id}`}>
                   <div className="flex items-center gap-3">
                     <Avatar className="h-10 w-10">
                       <AvatarFallback className="bg-primary/10 text-primary text-sm">{initials}</AvatarFallback>
@@ -178,7 +178,7 @@ export default function TeamPage() {
           </div>
           
           {/* Role Legend */}
-          <div className="mt-6 pt-4 border-t border-border/40">
+          <div className="mt-6 pt-4 border-t border-border">
             <p className="text-xs text-muted-foreground mb-2">Role Permissions:</p>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-xs">
               <div className="flex items-center gap-2">
